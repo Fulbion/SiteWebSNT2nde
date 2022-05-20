@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>C++ | Mon site</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" href="images/favicon.bmp">
+	</head>
+	
+	<body>
+		
+		<div id="entete">
+			<img src="https://i.pinimg.com/originals/b4/e3/71/b4e371619042d1e80918d09904e90f7d.gif" alt="canyon" width="100%" height="307"/>
+		</div>
+
+		<div id="navigation">
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="java.html">Java</a></li>
+				<li><a href="cpp.html">C++</a></li>
+				<li><a href="rickroll.html">Rickroll</a></li>				
+			</ul>
+		</div>
+		
+		<div id="contenu">
+			<h1>Le C++ !</h1>
+			<section class="p-content">
+				<h2>Qu'est-ce que c'est ?</h2>
+				<p>
+					Le <strong><a href="https://fr.wikipedia.org/wiki/C++" target="_BLANK">C++</a></strong> est <strike>le meilleur langage de programmation au monde</strike> un langage de programmation <a href="https://fr.wikipedia.org/wiki/POO" target="_BLANK">orienté objet</a> qui adopte quasiment la même syntaxe que le <strong><a href="https://fr.wikipedia.org/wiki/C_(langage)" target="_BLANK">C</a></strong>.<br><br>
+					J'ai dû en perdre la moitié. Ça a l'air compliqué, mais en vrai c'est simple.<br>
+					Grosso merdo, ce langage, c'est du <strong><a href="https://fr.wikipedia.org/wiki/C_(langage)" target="_BLANK">C</a></strong> avec des classes. Et je me rends compte que c'est tout aussi complexe. Déjà, voyons comment on dit "bonjour" avec ce langage :<br><br>
+					<div class="code" id="code-cpp-bonjour">
+						<font color="#555">1<font color="#222222">...</font></font><font color="#808080">#include</font> <font color="#FF8080">&lt;iostream&gt;</font><br><font color="#555">2<font color="#222222">...</font></font><br>
+						<font color="#555">3<font color="#222222">...</font></font><font color="#0080FF">int</font> <font color="#FFFFC8">main</font>()<br><font color="#555">4<font color="#222222">...</font></font>{<br>
+						<font color="#555">5<font color="#222222">...</font></font><font color="#222222">....</font><font color="#FFFFC8">std</font>::<font color="#FFFFC8">cout</font> &lt;&lt; <font color="#FF8080">"Hello, world!"</font>;<br>
+						<font color="#555">6<font color="#222222">...</font></font><font color="#222222">....</font><font color="FF80FF">return</font> <font color="C8FFC8">0</font>;<br>
+						<font color="#555">7<font color="#222222">...</font></font><font color="#FFFFFF">}</font>
+					</div><br>
+					Oui, c'est le bordel.<br><br>
+					Ensuite, cette page n'ent pas un tutoriel pour apprendre le C++ car la légende raconte que même le créateur du langage (<a href="https://fr.wikipedia.org/wiki/Bjarne_Stroustrup" target="_BLANK">Bjarne Stroustrup</a>) ne connaîtrait même pas en entier.<br><br>
+					D'ailleurs, ce langage de programmation (aussi complexe soit-il) est utilisé pour la programmation de jeux-vidéos : en effet, c'est grâce à ce langage que naît <a href="https://www.unrealengine.com" target="_BLANK">Unreal Engine</a>, le moteur de jeu de <a href="https://www.epicgames.com/site/fr/home" target="_BLANK">Epic Games</a>, en 1995.
+				</p>
+			</section>
+			<section class="p-content">
+				<h2>Les bibliothèques</h2>
+				<p>
+					Le souci du C++, c'est que malgré le fait que les gens puissent faire des dingueries avec ce langage, il ne sert qu'à faire des applications console (et la console, c'est pas le truc qu'on utilise pour jouer aux jeux-vidéos, c'est par exemple <span class="code-snippet">cmd</span>).<br>
+					Heureusement, la communauté a développé des bibliothèques (<i>libraries</i> en Anglais), des extensions de langage qui ajoutent entre autres des interfaces graphiques (GUI). L'une des plus connues se nomme <a href="https://sfml-dev.org/index-fr.php" target="_BLANK">SFML</a>.<br><br>
+					<div class="code" id="code-cpp-bonjour">
+						<font color="#555">1<font color="#222222">...</font></font><font color="#808080">#include</font> <font color="#FF8080">&lt;SFML/Graphics.hpp&gt;</font><br><font color="#555">2<font color="#222222">...</font></font><br>
+						<font color="#555">3<font color="#222222">...</font></font><font color="#0080FF">int</font> <font color="#FFFFC8">main</font>()<br><font color="#555">4<font color="#222222">...</font></font>{<br>
+						<font color="#555">5<font color="#222222">...</font></font><font color="#222222">....</font><font color="#FFFFC8">sf</font>::<font color="#00FF80">RenderWindow</font> <font color="#FFFFC8">window</font>(<font color="#FFFFC8">sf</font>::<font color="#00FF80">VideoMode</font>(<font color="C8FFC8">200</font>, <font color="C8FFC8">200</font>), <font color="#FF8080">"SFML works!"</font>);<br>
+						<font color="#555">6<font color="#222222">...</font></font><font color="#222222">....</font><font color="#FFFFC8">sf</font>::<font color="#00FF80">CircleShape</font> <font color="#FFFFC8">shape</font>(<font color="C8FFC8">200.f</font>);<br>
+						<font color="#555">7<font color="#222222">...</font></font><font color="#222222">....</font><font color="#FFFFC8">shape</font>.<font color="#FFFFC8">setFillColor</font>(<font color="#FFFFC8">sf</font>::<font color="#00FF80">Color</font>::<font color="#00FF80">Green</font>);<br>
+						<font color="#555">8<font color="#222222">...</font></font><font color="#222222">....</font><br>
+						<font color="#555">9<font color="#222222">...</font></font><font color="#222222">....</font><font color="FF80FF">while</font> (<font color="#FFFFC8">window</font>.<font color="#FFFFC8">isOpen</font>())<br>
+						<font color="#555">10<font color="#222222">..</font></font><font color="#222222">....</font>{<br>
+						<font color="#555">11<font color="#222222">..</font></font><font color="#222222">........</font><font color="#FFFFC8">sf</font>::<font color="#00FF80">Event</font> <font color="FFFFC8">event</font>;<br>
+						<font color="#555">12<font color="#222222">..</font></font><font color="#222222">........</font><font color="FF80FF">while</font> (<font color="#FFFFC8">window</font>.<font color="#FFFFC8">pollEvent</font>(<font color="#FFFFC8">event</font>))<br>
+						<font color="#555">13<font color="#222222">..</font></font><font color="#222222">........</font>{<br>
+						<font color="#555">14<font color="#222222">..</font></font><font color="#222222">............</font><font color="FF80FF">if</font> (<font color="#FFFFC8">event</font>.<font color="#FFFFC8">type</font> == <font color="#FFFFC8">sf</font>::<font color="#00FF80">Event</font>::<font color="#00FF80">Closed</font>)<br>
+						<font color="#555">15<font color="#222222">..</font></font><font color="#222222">................</font><font color="#FFFFC8">window</font>.<font color="#FFFFC8">close</font>();<br>
+						<font color="#555">16<font color="#222222">..</font></font><font color="#222222">........</font>}<br>
+						<font color="#555">17<font color="#222222">..</font></font><font color="#222222">........</font><br>
+						<font color="#555">18<font color="#222222">..</font></font><font color="#222222">........</font></font><font color="#FFFFC8">window</font>.<font color="#FFFFC8">clear</font>();<br>
+						<font color="#555">19<font color="#222222">..</font></font><font color="#222222">........</font></font><font color="#FFFFC8">window</font>.<font color="#FFFFC8">draw</font>(<font color="#FFFFC8">shape</font>);<br>
+						<font color="#555">20<font color="#222222">..</font></font><font color="#222222">........</font></font><font color="#FFFFC8">window</font>.<font color="#FFFFC8">display</font>();<br>
+						<font color="#555">21<font color="#222222">..</font></font><font color="#222222">....</font>}<br>
+						<font color="#555">24<font color="#222222">..</font></font><font color="#222222">....</font><br>
+						<font color="#555">23<font color="#222222">..</font></font><font color="#222222">....</font><font color="FF80FF">return</font> <font color="C8FFC8">0</font>;<br>
+						<font color="#555">24<font color="#222222">..</font></font><font color="#FFFFFF">}</font>
+					</div><br>
+					(Pitié, faire ces bouts de code colorés, ça m'a pris 3 heures !)<br><br>
+					SFML est une bibliothèque graphique basée sur OpenGL (qui d'ailleurs, possède une API pour développer des jeux en 2D et/ou en 3D). Il permet la création de jeux en 2D, mais peut éventuellement servir pour faire de la 3D (à condition de connaître assez bien le C++, d'avoir la théorie du rendu 3D, et d'avoir du temps devant soi).<br><br>
+					Il peut être comparé avec une autre bibliothèque C/C++ : SDL2 car lui aussi permet de créer des jeux 2D. D'ailleurs, SDL2 a servi pour la création d'un module en Python nommé Pygame.<br><br>
+					J'aimerais en dire plus sur ce langage, mais ça deviendrait de plus en plus technique et complexe, et je manque de temps. Heureusement, il existe de nombreuses documentations sur le Web.
+				</p>
+			</section>
+			
+		</div>
+		
+		<footer>
+			Ce site a été fait par Baptiste Poupeau, élève de 2GT1.<br>
+			Le CSS a été réalisé par <a href="https://www.elephorm.com/" target="_BLANK">Elephorm</a> et <a href="https://Alsacreations.com" target="_BLANK">Alsacreations.com</a> (et légèrement modifié par moi).
+		</footer>
+		
+	</body>
+</html>
